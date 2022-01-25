@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"  
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+              xmlns:p="http://www.springframework.org/schema/p"  
+              xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="traincons" class="springFramework.Trainee">
+<constructor-arg type="int" value="100"/>
+<constructor-arg value="abi"/>
+</bean>
+<bean id="employeebean" class="springFramework.Employee">
+<property name="empname" value="madhu"/>
+<property name="empid" value="102"/>
+
+</bean>
+<bean id="traincons2" class="springFramework.Trainee">
+<constructor-arg type="int" value="200"/>
+<constructor-arg value="madhu"/>
+</bean>
+
+<bean id="traincons3" class="springFramework.Trainee">
+<constructor-arg type="int" value="300"/>
+<constructor-arg value="jaya"/>
+</bean>
+<!-- If a scope is set to singleton, the Spring IoC container creates exactly one instance of the object defined by that 
+     bean definition. This single instance is stored in a cache of such singleton beans, and all subsequent requests and 
+     references for that named bean return the cached object. The default scope is always singleton. However, when you need
+     one and only one instance of a bean, you can set the scope property to singleton in the bean configuration file. -->
+
+<!--<bean id="employeescope" class="springcore.Emploee" scope="singleton">
+</bean> -->
+
+<!-- If the scope is set to prototype, the Spring IoC container creates a new bean instance of the object every time
+       a request for that specific bean is made. As a rule, use the prototype scope for all state-full beans and
+       the singleton scope for stateless beans.  -->
+
+ <bean id="employeescope1" class="springcore.Emploee" scope="prototype">
+</bean>
+</beans>

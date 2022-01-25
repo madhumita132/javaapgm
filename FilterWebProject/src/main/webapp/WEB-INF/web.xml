@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>FilterWebProject</display-name>
+  <welcome-file-list>
+    <welcome-file>NewFilter.html</welcome-file>
+    <welcome-file>Newjsp.html</welcome-file>
+    <welcome-file>beanJsp.html</welcome-file>
+  </welcome-file-list>
+   <filter>
+    <description></description>
+    <display-name>FilterClass</display-name>
+    <filter-name>FilterClass</filter-name>
+    <filter-class>filtereg.FilterClass</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>FilterClass</filter-name>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/FilterClass</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+            <description>ServletContext object demo</description>
+            <display-name>MyServlet</display-name>
+            <servlet-name>MyServlet</servlet-name>
+            <servlet-class>filtereg.MyServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+            <servlet-name>MyServlet</servlet-name>
+            <url-pattern>/MyServletUrl</url-pattern>
+ </servlet-mapping>
+  
+  
+</web-app>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>DynamicWebProject</display-name>
+  <welcome-file-list>
+    <welcome-file>NewServlet.html</welcome-file>
+  <welcome-file>NewServlet2.html</welcome-file>
+  <welcome-file>NewServlet4.html</welcome-file>
+  <welcome-file>NewServlet5.html</welcome-file>
+  <welcome-file>config.html</welcome-file>
+  </welcome-file-list>
+  
+   <!--describing servlet details-->
+  <servlet>
+  <description>It is for basic servlet execution</description>
+  <display-name>ServletDemo</display-name>
+  <servlet-name>ServletDemo</servlet-name>
+  <servlet-class>servletpackage.ServletDemo</servlet-class>
+  </servlet>
+  <!-- describing servlet mapping request details -->
+  
+  <servlet-mapping>
+  <servlet-name>ServletDemo</servlet-name>
+  <url-pattern>/ServletDemoUrl</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ServletClass</display-name>
+    <servlet-name>ServletClass</servlet-name>
+    <servlet-class>postget.ServletClass</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletClass</servlet-name>
+    <url-pattern>/ServletClassUrl</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>ServletClass3</display-name>
+    <servlet-name>ServletClass3</servlet-name>
+    <servlet-class>postget.ServletClass3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletClass3</servlet-name>
+    <url-pattern>/ServletClass3Url</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>ServletClass4</display-name>
+    <servlet-name>ServletClass4</servlet-name>
+    <servlet-class>postget.ServletClass4</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletClass4</servlet-name>
+    <url-pattern>/ServletClass4Url</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletClass5</display-name>
+    <servlet-name>ServletClass5</servlet-name>
+    <servlet-class>postget.ServletClass5</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletClass5</servlet-name>
+    <url-pattern>/ServletClass5Url</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletClass6</display-name>
+    <servlet-name>ServletClass6</servlet-name>
+    <servlet-class>postget.ServletClass6</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletClass6</servlet-name>
+    <url-pattern>/ServletClass6Url</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+            <description>This is for accessing the configurations related to a servlet from this file</description>
+            <display-name>ConfigClass6</display-name>
+            <servlet-name>ConfigClass6</servlet-name>
+            <servlet-class>postget.ConfigClass6</servlet-class>
+            
+            <init-param>
+                        <param-name>driver</param-name>
+                        <param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+            </init-param>
+            <init-param>
+                        <param-name>username</param-name>
+                        <param-value>madhu</param-value>
+            </init-param>
+            <init-param>  
+<param-name>password</param-name>  
+<param-value>oracle</param-value>  
+</init-param>  
+</servlet>
+<servlet-mapping>
+            <servlet-name>ConfigClass6</servlet-name>
+            <url-pattern>/ConfigClass6Url</url-pattern>
+</servlet-mapping>
+  
+  <context-param>
+             <param-name>password</param-name>
+             <param-value>root</param-value>
+</context-param>
+
+
+  
+</web-app>

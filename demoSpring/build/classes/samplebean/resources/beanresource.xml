@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+              xmlns:p="http://www.springframework.org/schema/p"  
+              xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="tempAdd" class="springFramework.Address" primary="true">
+		           <property name="address1" value="Hi-TechCity" />
+		           <property name="address2" value="Hyderabad" />
+	</bean>
+	<bean id="address" class="springFramework.Address">
+		           <property name="address1" value="Perungalathur" />
+		           <property name="address2" value="Chennai" />
+	</bean>
+   
+   <!-- default, byName, byType & constructor-->
+   
+<!-- <bean id="empaddrecall" class="springFramework.Employee" autowire="default">
+<property name="empname" value="madhu"/>
+<property name="empid" value="102"/>
+<property name="salary" value="40000.0"/>
+<property name="phoneno" value="42345"/>
+   here the property name maps the setter argument name
+ <property name="address" ref="tempAdd" />  -->
+<!--  beanid and setter name are same -->
+<!-- 
+ <bean id="empaddrecall" class="springFramework.Employee" autowire="byName">
+<property name="empname" value="madhu"/>
+<property name="empid" value="102"/>
+<property name="salary" value="40000.0"/>
+<property name="phoneno" value="42345"/>
+</bean> -->
+<!-- auto wire by constructor -->
+
+<!-- <bean id="empaddrecall" class="springFramework.Employee" autowire="constructor"> 
+		<property name="empid" value="1001"/> Setter Injection
+		<property name="salary" value="200000"/>Setter Injection
+		<constructor-arg ref="addressObject" /> This is absent Constructor Injection
+	</bean> -->
+	
+	<bean id="empaddrecall" class="springFramework.Employee" autowire="byType"> 
+		<property name="empid" value="1001"/> <!--Setter Injection-->
+		<property name="salary" value="200000"/><!--Setter Injection-->
+		<!--<constructor-arg ref="addressObject" />--> <!-- This is absent Constructor Injection-->
+	</bean>
+	    
+
+</beans>
